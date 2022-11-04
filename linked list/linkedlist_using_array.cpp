@@ -43,6 +43,18 @@ void display(struct Node *s){
 	
 }
 
+void displayR(struct Node *p)
+{
+if(p!=NULL){
+
+	cout<<p->data<<"->";
+	displayR(p->next);
+
+
+}
+}
+
+
 int main(){
  int n;
  cout<<"enter the size of the linkedlist ";
@@ -56,7 +68,8 @@ int main(){
  }
  
  create(A,n);
- display(first);
+ cout<<"the linkedlist is : ";
+ displayR(first);
  
  
 	return 0;
